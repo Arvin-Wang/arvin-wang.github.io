@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Arvin&#39;s blog</title>
+  <subtitle>A Web Front-End Engineer.</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2017-06-15T06:18:40.845Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Arvin Wang</name>
+    <email>w522142800@126.com</email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HTML知识梳理</title>
+    <link href="http://yoursite.com/2017/06/15/diary8/"/>
+    <id>http://yoursite.com/2017/06/15/diary8/</id>
+    <published>2017-06-15T02:22:29.000Z</published>
+    <updated>2017-06-15T06:18:40.845Z</updated>
+    
+    <content type="html"><![CDATA[<p>昨晚和豆豆聊起工作， 她说白天的代码遇到了一些坑，都是一些简单的、基础的东西，因为不熟悉而出现问题，以为是新知识，其实都是老玩意儿。反省自己，何尝不是这样。前端知识，在大学课堂上，老师是不会教的，毕竟时间宝贵，只教硬课。我又是个马虎的人，自学过程中，疏漏在所难免，尽管已经写了几版官网，N多小项目页面，仍有很多欠缺。因此，在这篇日志里，把前端html,css的基础知识再系统的梳理一遍，把此前模糊的、易错的，都写在这里，且学而时习之，常来翻阅。</p>
+<p>（文章脉路、结构不会很标准，按我看到的点信手所写。）</p>
+<p></p><h1>HTML</h1><p></p>
+<h2>①html的语义化</h2><br>这篇太长了，另开一篇。<br><h2>②HTML5的新标签</h2><br><p>对H5新标签的梳理及我自己的理解。有很多还不太懂，认识很浅。</p><br><code>&lt;article&gt;&lt;/article&gt;</code><br>一个文章内容的标签，让DOM结构更清楚，意义article的内容独立于页面其余部分<br><code>&lt;aside&gt;&lt;/aside&gt;</code><br>可用于页面侧栏。定义其所处内容之外的内容。（不懂）<br><code>&lt;audio&gt;&lt;/audio&gt;</code><br><br>感觉是一个使用频率还可以的标签，比较好用的播放音频<br>ep：<br><code>&lt;audio src=&quot;/i/horse.ogg&quot; controls=&quot;controls&quot;&gt;
+Your browser does not support the audio element.
+&lt;/audio&gt;</code><br><br>同时被赋予了一些新属性：autoplay\controls\loop\muted\preload;<br>有些微信公众号的页面的音频会autoplay，太不为用户考虑了，万一人家上班时候打开，老板在旁边听到多尴尬！<br><code>&lt;bdi&gt;&lt;/bdi&gt;</code><br><br>又一个让人不明所以的标签。<br>把用户名从周围的文本方向设置中隔离出来。（wtf？）<br><code>&lt;canvas&gt;&lt;/canvas&gt;</code><br><br>一个非常棒的标签。因为我用过，知道她的美（蜜汁微笑）。<br>顾名思义，canvas单词的意思是画布，这个标签就是用来作画的，画笔是JS，化成之后，能够以 .png 或 .jpg 格式保存结果图像（不同于SVG）。用法不再赘述。<br><code>&lt;command&gt;&lt;/command&gt;</code><br><br>没有浏览器支持这个标签。呵呵。仿佛没有女朋友的屌丝，对天怒吼：我要，这铁棒有何用？<br><br><code>&lt;datalist&gt;&lt;/datalist&gt;</code><br><br>配合input使用，用input的lish属性来绑定。<br>ep：<br><code>&lt;input id=&quot;myCar&quot; list=&quot;cars&quot; /&gt;
+&lt;datalist id=&quot;cars&quot;&gt;
+  &lt;option value=&quot;BMW&quot;&gt;
+  &lt;option value=&quot;Ford&quot;&gt;
+  &lt;option value=&quot;Volvo&quot;&gt;
+&lt;/datalist&gt;</code><br><br>datalist 及其选项不会被显示出来，它仅仅是合法的输入值列表。<br><code>&lt;dialog&gt;&lt;/dialog&gt;</code><br><br>定义对话框。支持的浏览器不多，待完善。<br><code>&lt;embed&gt;&lt;/embed&gt;</code><br><br>这个标签有意思了，读出来，不由的让我联想到76人队的大帝Joel Embiid，哈哈哈。Trust the process!<br><embed> 标签定义嵌入的内容，比如插件。<br><code>&lt;figure&gt;&lt;/figure&gt;</code><br><br>figure标签规定独立的流内容（图像、图表、照片、代码等等）。<br>figure 元素的内容应该与主内容相关，但如果被删除，则不应对文档流产生影响。<br>用于插图。<br><code>&lt;figcaption&gt;&lt;/figcaption&gt;</code><br><br>figure的标题。<br><br><code>&lt;footer&gt;&lt;/footer&gt;</code><br>页脚<br><code>&lt;header&gt;&lt;/header&gt;</code><br>页眉<br>其实H5很多新标签都是顺html语义化趋势的而生。footer、header最明显。<br>还有，<br><code>&lt;nav&gt;&lt;/nav&gt;</code><br><br><code>&lt;nav&gt;</code>标签定义导航链接的部分。<br><code>&lt;keygen&gt;&lt;/keygen&gt;</code><br>此标签规定用于表单的密钥对生成器字段。<br>当提交表单时，私钥存储在本地，公钥发送到服务器。<br>除了IE，都支持。<br><code>&lt;mark&gt;&lt;/mark&gt;</code><br>用于突出显示文本内容。<br>会直接给标签内背景上个色。挺2。<br><code>&lt;meter&gt;&lt;/meter&gt;</code><br><br><img src="/2017/06/15/diary8/1.jpg" alt="meter标签"><br><img src="/2017/06/15/diary8/2.jpg" alt="progress标签"><br>比较实用的标签，和<code>&lt;progress value=&quot;&quot; max=&quot;&quot;&gt;&lt;/progress&gt;</code><br>一起看。<br><code>&lt;meter&gt;</code><br>标签定义已知范围或分数值内的标量测量。也被称为 gauge（尺度）。<br>例子：磁盘用量、查询结果的相关性，等等。<br>注释：meter 标签不应用于指示进度（在进度条中）。如果标记进度条，请使用 progress 标签。<br>没有这种标签时，写这种效果会很烦。<br><br><code>&lt;output&gt;&lt;/output&gt;</code><br><br>output标签定义不同类型的输出，比如脚本的输出。<br>ep:执行计算然后在 <output> 元素中显示结果：<br><code>&lt;form oninput=&quot;x.value=parseInt(a.value)+parseInt(b.value)&quot;&gt;0
+   &lt;input type=&quot;range&quot; id=&quot;a&quot; value=&quot;50&quot;&gt;100
+   +&lt;input type=&quot;number&quot; id=&quot;b&quot; value=&quot;50&quot;&gt;
+   =&lt;output name=&quot;x&quot; for=&quot;a b&quot;&gt;&lt;/output&gt;
+&lt;/form&gt;</code><br><br><br><code>&lt;rp&gt;&lt;/rp&gt;</code><br><br>rp标签在 ruby 注释中使用，以定义不支持 ruby 元素的浏览器所显示的内容。(用处不大)<br><code>&lt;rt&gt;&lt;/rt&gt;</code><br><br>rt 标签定义字符（中文注音或字符）的解释或发音。<br>ruby 标签定义 ruby 注释（中文注音或字符）。<br>在东亚使用，显示的是东亚字符的发音。<br> <code>&lt;ruby&gt;&lt;rp&gt;&lt;rt&gt;</code>标签一同使。<br><br><code>&lt;section&gt;&lt;/section&gt;</code><br><br>section 标签定义文档中的节（section、区段）。比如章节、页眉、页脚或文档中的其他部分。同样是语义化的产物。<br><br><code>&lt;source&gt;</code>标签为媒介元素（比如 video和 audio）定义媒介资源。<br>source标签允许您规定可替换的视频/音频文件供浏览器根据它对媒体类型或者编解码器的支持进行选择。<br>（有两份源文件时，浏览器选择自己支持的）<br><br><code>&lt;summary&gt;&lt;/summary&gt;</code><br><br>summary 标签包含 details 元素的标题，”details” 元素用于描述有关文档或文档片段的详细信息。<br>ep:<code>&lt;details&gt;
+&lt;summary&gt;HTML 5&lt;/summary&gt;
+This document teaches you everything you have to learn about HTML 5.
+&lt;/details&gt;</code><br><br>这个标签很有用，details 的内容可以点击下拉显示，原本这种效果要写一会儿，挺繁琐。<br>但是只有chrome和safari支持这个标签，so，farewell！<br><code>&lt;time&gt;&lt;/time&gt;</code><br>定义时间和日期<br>为了搜索引擎而生的标签，没啥用。<br><code>&lt;track kind=&quot;&quot; src=&quot;&quot; srclang=&quot;&quot;&gt;</code><br><br>播放带有字幕的视频：<br>这个标签专门放字幕的，有趣。浏览器基本都不支持。<br><code>&lt;video&gt;&lt;/video&gt;</code><br>视频标签。<br><br><code>&lt;wbr&gt;</code><br>Word Break Opportunity (wbr) 规定在文本中的何处适合添加换行符。<br>提示：如果单词太长，或者您担心浏览器会在错误的位置换行，那么您可以使用<code>&lt;wbr&gt;</code>元素来添加 Word Break Opportunity（单词换行时机）。IE不支持，别的都行。这个实用。<br><br><br>照着W3C的列表过了一遍，应该是所有的了。<br><br><br><h2>③input的一点补充</h2>
+
+<p><code>&lt;input type=&quot;reset&quot; name=&quot;&quot;&gt;</code><br><br>input的重置类型：    定义重置按钮。重置按钮会清除form中的所有数据。</p>
+<p><code>&lt;input type=&quot;hidden&quot; name=&quot;&quot;&gt;</code><br><br>input的hidden类型：<br>可以利用其value在某些特定场景下传一些参数。（我自己的脑洞，未必方便）</p>
+</output>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;昨晚和豆豆聊起工作， 她说白天的代码遇到了一些坑，都是一些简单的、基础的东西，因为不熟悉而出现问题，以为是新知识，其实都是老玩意儿。反省自己，何尝不是这样。前端知识，在大学课堂上，老师是不会教的，毕竟时间宝贵，只教硬课。我又是个马虎的人，自学过程中，疏漏在所难免，尽管已经写
+    
+    </summary>
+    
+      <category term="HTML" scheme="http://yoursite.com/categories/HTML/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>hexo博文插入img</title>
+    <link href="http://yoursite.com/2017/06/06/test-diary5/"/>
+    <id>http://yoursite.com/2017/06/06/test-diary5/</id>
+    <published>2017-06-06T06:40:08.000Z</published>
+    <updated>2017-06-06T08:06:25.185Z</updated>
+    
+    <content type="html"><![CDATA[<p>一直想在hexo博文中插入图片，发现md文档怎么引入都有问题。同时我不想用图床，因为速度的问题。而且很巧的是国内用的比较多的新浪图床挂了。探究了一番。找到了一个工具，比较好使。</p>
+<p>hexo-asset-image</p>
+<p>Process：<br>1st，修改_config.yml post_asset_folder:为true；<br>2nd，npm install hexo-asset-image –save；<br>3rd，再次生成博文时，hexo new post “XXX”, source/_posts 文件下会生成对应的”XXX”文件夹和“XXX”.md文件，此md文件引用图片的路径直接就是<br><code>![图片名字（自己起）](XXX.jpg)</code><br>例：<br><img src="/2017/06/06/test-diary5/3.jpg" alt=""></p>
+<p><img src="/2017/06/06/test-diary5/1.jpg" alt="Arvin&#39;s img 1"><br><img src="/2017/06/06/test-diary5/2.jpg" alt="Arvin&#39;s img 2"></p>
+<p>或者，也可以手动建立，图像文件夹和md文档，名字相同即可，效果一样。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;一直想在hexo博文中插入图片，发现md文档怎么引入都有问题。同时我不想用图床，因为速度的问题。而且很巧的是国内用的比较多的新浪图床挂了。探究了一番。找到了一个工具，比较好使。&lt;/p&gt;
+&lt;p&gt;hexo-asset-image&lt;/p&gt;
+&lt;p&gt;Process：&lt;br&gt;1st，修
+    
+    </summary>
+    
+      <category term="Hexo" scheme="http://yoursite.com/categories/Hexo/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>好！烦！</title>
+    <link href="http://yoursite.com/2017/05/27/diary4/"/>
+    <id>http://yoursite.com/2017/05/27/diary4/</id>
+    <published>2017-05-27T08:17:59.432Z</published>
+    <updated>2017-05-27T09:17:24.912Z</updated>
+    
+    <content type="html"><![CDATA[<p>一整个下午都被我浪费掉了，刷刷微博，逛逛论坛，半点知识没学。<br>究其原因，一是懒惰，二是自己好大喜功，总定大目标，长目标，好高骛远，没有短期、短时间详细的计划，这样反而自缚手脚，因为眼下无论做些什么，似乎对于那个长远宏大的目标没有帮助，更加不愿行动了。</p>
+<p>胡适说过，“怕什么真理无穷，进一寸有一寸的欢喜”，的确啊，高中的时候，有一段时间，成绩没有起色，很苦恼，然后我给自己写了个“功不唐捐”的纸条贴在课桌上，甚至写满了每个课本的扉页，自我激励着，踏实做每一道习题，每个化学方程式，每个英文单词，尽管每次模拟考试，都不如我意，但高考时，确实有极大的进步，被老师同学称为黑马。</p>
+<p>进一寸的欢喜，不需要他山之石，自己的经验就足够，尤其在技术这个需要不断学习沉淀的行业。沉下心，慢慢来。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;一整个下午都被我浪费掉了，刷刷微博，逛逛论坛，半点知识没学。&lt;br&gt;究其原因，一是懒惰，二是自己好大喜功，总定大目标，长目标，好高骛远，没有短期、短时间详细的计划，这样反而自缚手脚，因为眼下无论做些什么，似乎对于那个长远宏大的目标没有帮助，更加不愿行动了。&lt;/p&gt;
+&lt;p&gt;胡
+    
+    </summary>
+    
+      <category term="随感" scheme="http://yoursite.com/categories/%E9%9A%8F%E6%84%9F/"/>
+    
+    
+      <category term="日记" scheme="http://yoursite.com/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS绘制实心、空心三角形的不同方法</title>
+    <link href="http://yoursite.com/2017/05/27/diary3/"/>
+    <id>http://yoursite.com/2017/05/27/diary3/</id>
+    <published>2017-05-27T02:16:31.759Z</published>
+    <updated>2017-06-06T09:23:55.282Z</updated>
+    
+    <content type="html"><![CDATA[<p>昨天一个项目，在一个密码提示框出，要hover一个聊天框出来，聊天框上是有三角形的，之前好像也写过，但当时直接搜的样例用了，没太搞清楚空心三角形怎么写的。今天闲下来，就把这一小块知识梳理一下。</p>
+<p>·············</p>
+<p>首先，空心三角形的思路是：用before伪类写一个实心三角形，再用after写一个小一圈的三角形覆盖上去，留下边缘，形成空心三角的视觉效果(好想说“形成这样一个triangle的Visual effect”,现在程序员说话不蹦几个English words好像都不好意思开口，真是奇怪的文化；我司开会时，更新、跟进不说更新，都说“我们来update一下”，呵呵，老铁真想给你个666)。</p>
+<!-- <div class="arvin-triangle" id="triangle-up">
+
+</div> -->
+<p><img src="/2017/05/27/diary3/1.jpg" alt="此图本人手写，人丑图丑，勿怪"></p>
+<p>dom:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;arvin-triangle&quot;&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<p>css：<br>注释掉div本身是因为，需求是写聊天框<br>类似于<br><img src="/2017/05/27/diary3/2.png" alt=""><br>此处我为了练习直接表现了一个三角形。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">.arvin-triangle&#123;</div><div class="line">	/*width: 125px;</div><div class="line">	height: 40px;*/</div><div class="line">	position: relative;</div><div class="line">	background-color: red;</div><div class="line">	/*border: 1px solid black;*/</div><div class="line">	margin-left: 50px;/* just for visual effect,no special significance */</div><div class="line">&#125;</div><div class="line"></div><div class="line">.arvin-triangle:before&#123;</div><div class="line">	content: &apos;&apos;;</div><div class="line">	position: absolute;</div><div class="line">	top: 10px;</div><div class="line">	left: 10px;</div><div class="line">	width: 0;</div><div class="line">	height: 0;</div><div class="line">	border-right: 110px solid black;</div><div class="line">	border-bottom: 110px solid transparent;</div><div class="line">	border-top: 110px solid transparent;</div><div class="line">&#125;</div><div class="line">.arvin-triangle:after&#123;</div><div class="line">	content: &apos;&apos;;</div><div class="line">	position: absolute;</div><div class="line">	top: 40px;</div><div class="line">	left: 28px;</div><div class="line">	width: 0;</div><div class="line">	height: 0;</div><div class="line">	border-right: 80px solid white;</div><div class="line">	border-bottom: 80px solid transparent;</div><div class="line">	border-top: 80px solid transparent;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>P.s<br>实心三角形，就直接用div的边写出来。<br><img src="/2017/05/27/diary3/3.jpg" alt=""><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&lt;style&gt;</div><div class="line">#triangle-up &#123; </div><div class="line">width: 0; </div><div class="line">height: 0; </div><div class="line">border-left: 50px solid transparent; </div><div class="line">border-right: 50px solid transparent; </div><div class="line">border-top: 90px solid red; </div><div class="line">margin: 50px;</div><div class="line">&#125; </div><div class="line">&lt;/style&gt;</div><div class="line">&lt;div class=&quot;&quot; id=&quot;triangle-up&quot;&gt;</div><div class="line">	</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;昨天一个项目，在一个密码提示框出，要hover一个聊天框出来，聊天框上是有三角形的，之前好像也写过，但当时直接搜的样例用了，没太搞清楚空心三角形怎么写的。今天闲下来，就把这一小块知识梳理一下。&lt;/p&gt;
+&lt;p&gt;·············&lt;/p&gt;
+&lt;p&gt;首先，空心三角形的思路是
+    
+    </summary>
+    
+      <category term="CSS" scheme="http://yoursite.com/categories/CSS/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Node学习——1st</title>
+    <link href="http://yoursite.com/2017/05/22/diary2/"/>
+    <id>http://yoursite.com/2017/05/22/diary2/</id>
+    <published>2017-05-22T02:08:33.768Z</published>
+    <updated>2017-05-22T08:54:40.745Z</updated>
+    
+    <content type="html"><![CDATA[<p>经过认真（从前端工程师开始的职业生涯，对js熟悉并有好感；V8很强大，js很美好；Node社区及其活跃，未来可期）考虑，我决定潜心学习node.js，记录之。<br>node学习网站推荐：</p>
+<p><a href="https://nodejs.org" target="_blank" rel="external">https://nodejs.org</a><br><a href="https://www.npmjs.com/" target="_blank" rel="external">https://www.npmjs.com/</a><br><a href="https://github.com" target="_blank" rel="external">https://github.com</a><br><a href="http://stackoverflow.com/" target="_blank" rel="external">http://stackoverflow.com/</a></p>
+<p>http协议的知识大学时候就没搞清楚，上课在瞎混，以前浪费的时间还是要补回来的。这篇“从输入 URL 到页面加载完成的过程中都发生了什么事情？”很棒。学而时习之。<br><a href="http://fex.baidu.com/blog/2014/05/what-happen/" target="_blank" rel="external">http://fex.baidu.com/blog/2014/05/what-happen/</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;经过认真（从前端工程师开始的职业生涯，对js熟悉并有好感；V8很强大，js很美好；Node社区及其活跃，未来可期）考虑，我决定潜心学习node.js，记录之。&lt;br&gt;node学习网站推荐：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://nodejs.org&quot; target
+    
+    </summary>
+    
+      <category term="Node.js" scheme="http://yoursite.com/categories/Node-js/"/>
+    
+    
+      <category term="Node.js" scheme="http://yoursite.com/tags/Node-js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>设置SSH</title>
+    <link href="http://yoursite.com/2017/05/18/diary1/"/>
+    <id>http://yoursite.com/2017/05/18/diary1/</id>
+    <published>2017-05-18T02:04:36.686Z</published>
+    <updated>2017-05-18T03:25:28.777Z</updated>
+    
+    <content type="html"><![CDATA[<p>准备给公司电脑设置SSH，绑定git blog在本机。</p>
+<p>业精于勤，荒于嬉；行成于思，毁于随。<br>我打小自以为有点小聪明，成绩比别人好，学习、做事，就都有些任性和马虎，养成了散漫的习惯，以至于现在有了拖延和迟到的毛病。</p>
+<p>准时就是迟到；立刻处理手头的事情，才不会有焦虑。谨记之。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;准备给公司电脑设置SSH，绑定git blog在本机。&lt;/p&gt;
+&lt;p&gt;业精于勤，荒于嬉；行成于思，毁于随。&lt;br&gt;我打小自以为有点小聪明，成绩比别人好，学习、做事，就都有些任性和马虎，养成了散漫的习惯，以至于现在有了拖延和迟到的毛病。&lt;/p&gt;
+&lt;p&gt;准时就是迟到；立刻处理手
+    
+    </summary>
+    
+      <category term="随感" scheme="http://yoursite.com/categories/%E9%9A%8F%E6%84%9F/"/>
+    
+    
+      <category term="日记" scheme="http://yoursite.com/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>大王&amp;豆豆</title>
+    <link href="http://yoursite.com/2017/05/18/diary0/"/>
+    <id>http://yoursite.com/2017/05/18/diary0/</id>
+    <published>2017-05-18T01:18:43.939Z</published>
+    <updated>2017-05-18T02:03:20.945Z</updated>
+    
+    <content type="html"><![CDATA[<p>么么哒!<br>Daphne love Arvin!!!</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;么么哒!&lt;br&gt;Daphne love Arvin!!!&lt;/p&gt;
+
+    
+    </summary>
+    
+      <category term="随感" scheme="http://yoursite.com/categories/%E9%9A%8F%E6%84%9F/"/>
+    
+    
+      <category term="日记" scheme="http://yoursite.com/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
+  
+</feed>
