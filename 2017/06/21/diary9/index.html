@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>CSS绘制实心、空心三角形的不同方法 | Arvin&#39;s blog</title>
+  <title>diary9 | Arvin&#39;s blog</title>
   <meta name="author" content="Arvin Wang">
   
   <meta name="description" content="Arvin Wang&#39;s blog">
@@ -13,7 +13,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="CSS绘制实心、空心三角形的不同方法"/>
+  <meta property="og:title" content="diary9"/>
   <meta property="og:site_name" content="Arvin&#39;s blog"/>
 
   
@@ -220,37 +220,22 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2017-05-27T02:16:31.759Z"><a href="/2017/05/27/diary3/">2017-05-27</a></time>
+        <time datetime="2017-06-21T06:36:47.000Z"><a href="/2017/06/21/diary9/">2017-06-21</a></time>
       
       
   
-    <h1 class="title">CSS绘制实心、空心三角形的不同方法</h1>
+    <h1 class="title">diary9</h1>
   
 
     </header>
     <div class="entry">
       
-        <p>昨天一个项目，在一个密码提示框出，要hover一个聊天框出来，聊天框上是有三角形的，之前好像也写过，但当时直接搜的样例用了，没太搞清楚空心三角形怎么写的。今天闲下来，就把这一小块知识梳理一下。</p>
-<p>·············</p>
-<p>首先，空心三角形的思路是：用before伪类写一个实心三角形，再用after写一个小一圈的三角形覆盖上去，留下边缘，形成空心三角的视觉效果(好想说“形成这样一个triangle的Visual effect”,现在程序员说话不蹦几个English words好像都不好意思开口，真是奇怪的文化；我司开会时，更新、跟进不说更新，都说“我们来update一下”，呵呵，老铁真想给你个666)。</p>
-<!-- <div class="arvin-triangle" id="triangle-up">
-
-</div> -->
-<p><img src="/2017/05/27/diary3/1.jpg" alt="此图本人手写，人丑图丑，勿怪"></p>
-<p>dom:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;arvin-triangle&quot;&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
-<p>css：<br>注释掉div本身是因为，需求是写聊天框<br>类似于<br><img src="/2017/05/27/diary3/2.png" alt=""><br>此处我为了练习直接表现了一个三角形。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">.arvin-triangle&#123;</div><div class="line">	/*width: 125px;</div><div class="line">	height: 40px;*/</div><div class="line">	position: relative;</div><div class="line">	background-color: red;</div><div class="line">	/*border: 1px solid black;*/</div><div class="line">	margin-left: 50px;/* just for visual effect,no special significance */</div><div class="line">&#125;</div><div class="line"></div><div class="line">.arvin-triangle:before&#123;</div><div class="line">	content: &apos;&apos;;</div><div class="line">	position: absolute;</div><div class="line">	top: 10px;</div><div class="line">	left: 10px;</div><div class="line">	width: 0;</div><div class="line">	height: 0;</div><div class="line">	border-right: 110px solid black;</div><div class="line">	border-bottom: 110px solid transparent;</div><div class="line">	border-top: 110px solid transparent;</div><div class="line">&#125;</div><div class="line">.arvin-triangle:after&#123;</div><div class="line">	content: &apos;&apos;;</div><div class="line">	position: absolute;</div><div class="line">	top: 40px;</div><div class="line">	left: 28px;</div><div class="line">	width: 0;</div><div class="line">	height: 0;</div><div class="line">	border-right: 80px solid white;</div><div class="line">	border-bottom: 80px solid transparent;</div><div class="line">	border-top: 80px solid transparent;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>P.s<br>实心三角形，就直接用div的边写出来。<br><img src="/2017/05/27/diary3/3.jpg" alt=""><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&lt;style&gt;</div><div class="line">#triangle-up &#123; </div><div class="line">width: 0; </div><div class="line">height: 0; </div><div class="line">border-left: 50px solid transparent; </div><div class="line">border-right: 50px solid transparent; </div><div class="line">border-top: 90px solid red; </div><div class="line">margin: 50px;</div><div class="line">&#125; </div><div class="line">&lt;/style&gt;</div><div class="line">&lt;div class=&quot;&quot; id=&quot;triangle-up&quot;&gt;</div><div class="line">	</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
-
+        
       
     </div>
     <footer>
       
         
-  
-  <div class="categories">
-    <a href="/categories/CSS/">CSS</a>
-  </div>
-
         
 <!-- Baidu Button BEGIN -->
 <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
@@ -277,10 +262,8 @@ document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static
 
  <nav id="pagination" >
     
-    <a href="/2017/05/27/diary4/" class="alignleft prev" >上一页</a>
     
-    
-    <a href="/2017/05/22/diary2/" class="alignright next" >下一页</a>
+    <a href="/2017/06/15/diary8/" class="alignright next" >下一页</a>
     
     <div class="clearfix"></div>
 </nav>
