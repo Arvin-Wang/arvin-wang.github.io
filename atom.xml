@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://arvin-wang.github.io/"/>
-  <updated>2017-06-21T06:40:30.443Z</updated>
+  <updated>2017-07-31T08:07:44.449Z</updated>
   <id>http://arvin-wang.github.io/</id>
   
   <author>
@@ -16,28 +16,13 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>diary9</title>
-    <link href="http://arvin-wang.github.io/2017/06/21/diary9/"/>
-    <id>http://arvin-wang.github.io/2017/06/21/diary9/</id>
-    <published>2017-06-21T06:36:47.000Z</published>
-    <updated>2017-06-21T06:40:30.443Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>HTML知识梳理</title>
     <link href="http://arvin-wang.github.io/2017/06/15/diary8/"/>
     <id>http://arvin-wang.github.io/2017/06/15/diary8/</id>
     <published>2017-06-15T02:22:29.000Z</published>
-    <updated>2017-06-15T06:18:40.845Z</updated>
+    <updated>2017-07-31T08:07:44.449Z</updated>
     
-    <content type="html"><![CDATA[<p>昨晚和豆豆聊起工作， 她说白天的代码遇到了一些坑，都是一些简单的、基础的东西，因为不熟悉而出现问题，以为是新知识，其实都是老玩意儿。反省自己，何尝不是这样。前端知识，在大学课堂上，老师是不会教的，毕竟时间宝贵，只教硬课。我又是个马虎的人，自学过程中，疏漏在所难免，尽管已经写了几版官网，N多小项目页面，仍有很多欠缺。因此，在这篇日志里，把前端html,css的基础知识再系统的梳理一遍，把此前模糊的、易错的，都写在这里，且学而时习之，常来翻阅。</p>
-<p>（文章脉路、结构不会很标准，按我看到的点信手所写。）</p>
+    <content type="html"><![CDATA[<p>昨晚和豆豆聊起工作， 她说白天的代码遇到了一些坑，都是一些简单的、基础的东西，因为不熟悉而出现问题，以为是新知识，其实都是老玩意儿。反省自己，何尝不是这样。前端知识，在大学课堂上，老师是不会教的，毕竟时间宝贵，只教硬课。我又是个马虎的人，自学过程中，疏漏在所难免，尽管已经写了几版官网，N多小项目页面，仍有很多欠缺。因此，在这篇日志里，把前端html,css的基础知识再系统的梳理一遍，把此前模糊的、易错的，都写在这里，且学而时习之，常来翻阅。<br><a id="more"></a><br>（文章脉路、结构不会很标准，按我看到的点信手所写。）</p>
 <p></p><h1>HTML</h1><p></p>
 <h2>①html的语义化</h2><br>这篇太长了，另开一篇。<br><h2>②HTML5的新标签</h2><br><p>对H5新标签的梳理及我自己的理解。有很多还不太懂，认识很浅。</p><br><code>&lt;article&gt;&lt;/article&gt;</code><br>一个文章内容的标签，让DOM结构更清楚，意义article的内容独立于页面其余部分<br><code>&lt;aside&gt;&lt;/aside&gt;</code><br>可用于页面侧栏。定义其所处内容之外的内容。（不懂）<br><code>&lt;audio&gt;&lt;/audio&gt;</code><br><br>感觉是一个使用频率还可以的标签，比较好用的播放音频<br>ep：<br><code>&lt;audio src=&quot;/i/horse.ogg&quot; controls=&quot;controls&quot;&gt;
 Your browser does not support the audio element.
@@ -61,7 +46,7 @@ This document teaches you everything you have to learn about HTML 5.
     
     <summary type="html">
     
-      &lt;p&gt;昨晚和豆豆聊起工作， 她说白天的代码遇到了一些坑，都是一些简单的、基础的东西，因为不熟悉而出现问题，以为是新知识，其实都是老玩意儿。反省自己，何尝不是这样。前端知识，在大学课堂上，老师是不会教的，毕竟时间宝贵，只教硬课。我又是个马虎的人，自学过程中，疏漏在所难免，尽管已经写
+      &lt;p&gt;昨晚和豆豆聊起工作， 她说白天的代码遇到了一些坑，都是一些简单的、基础的东西，因为不熟悉而出现问题，以为是新知识，其实都是老玩意儿。反省自己，何尝不是这样。前端知识，在大学课堂上，老师是不会教的，毕竟时间宝贵，只教硬课。我又是个马虎的人，自学过程中，疏漏在所难免，尽管已经写了几版官网，N多小项目页面，仍有很多欠缺。因此，在这篇日志里，把前端html,css的基础知识再系统的梳理一遍，把此前模糊的、易错的，都写在这里，且学而时习之，常来翻阅。&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
@@ -75,10 +60,9 @@ This document teaches you everything you have to learn about HTML 5.
     <link href="http://arvin-wang.github.io/2017/06/06/test-diary5/"/>
     <id>http://arvin-wang.github.io/2017/06/06/test-diary5/</id>
     <published>2017-06-06T06:40:08.000Z</published>
-    <updated>2017-06-06T08:06:25.185Z</updated>
+    <updated>2017-07-31T08:09:08.304Z</updated>
     
-    <content type="html"><![CDATA[<p>一直想在hexo博文中插入图片，发现md文档怎么引入都有问题。同时我不想用图床，因为速度的问题。而且很巧的是国内用的比较多的新浪图床挂了。探究了一番。找到了一个工具，比较好使。</p>
-<p>hexo-asset-image</p>
+    <content type="html"><![CDATA[<p>一直想在hexo博文中插入图片，发现md文档怎么引入都有问题。同时我不想用图床，因为速度的问题。而且很巧的是国内用的比较多的新浪图床挂了。探究了一番。找到了一个工具，比较好使。<br><a id="more"></a><br>hexo-asset-image</p>
 <p>Process：<br>1st，修改_config.yml post_asset_folder:为true；<br>2nd，npm install hexo-asset-image –save；<br>3rd，再次生成博文时，hexo new post “XXX”, source/_posts 文件下会生成对应的”XXX”文件夹和“XXX”.md文件，此md文件引用图片的路径直接就是<br><code>![图片名字（自己起）](XXX.jpg)</code><br>例：<br><img src="/2017/06/06/test-diary5/3.jpg" alt=""></p>
 <p><img src="/2017/06/06/test-diary5/1.jpg" alt="Arvin&#39;s img 1"><br><img src="/2017/06/06/test-diary5/2.jpg" alt="Arvin&#39;s img 2"></p>
 <p>或者，也可以手动建立，图像文件夹和md文档，名字相同即可，效果一样。</p>
@@ -86,9 +70,7 @@ This document teaches you everything you have to learn about HTML 5.
     
     <summary type="html">
     
-      &lt;p&gt;一直想在hexo博文中插入图片，发现md文档怎么引入都有问题。同时我不想用图床，因为速度的问题。而且很巧的是国内用的比较多的新浪图床挂了。探究了一番。找到了一个工具，比较好使。&lt;/p&gt;
-&lt;p&gt;hexo-asset-image&lt;/p&gt;
-&lt;p&gt;Process：&lt;br&gt;1st，修
+      &lt;p&gt;一直想在hexo博文中插入图片，发现md文档怎么引入都有问题。同时我不想用图床，因为速度的问题。而且很巧的是国内用的比较多的新浪图床挂了。探究了一番。找到了一个工具，比较好使。&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
@@ -102,17 +84,15 @@ This document teaches you everything you have to learn about HTML 5.
     <link href="http://arvin-wang.github.io/2017/05/27/diary4/"/>
     <id>http://arvin-wang.github.io/2017/05/27/diary4/</id>
     <published>2017-05-27T08:17:59.432Z</published>
-    <updated>2017-05-27T09:17:24.912Z</updated>
+    <updated>2017-07-31T08:08:12.288Z</updated>
     
-    <content type="html"><![CDATA[<p>一整个下午都被我浪费掉了，刷刷微博，逛逛论坛，半点知识没学。<br>究其原因，一是懒惰，二是自己好大喜功，总定大目标，长目标，好高骛远，没有短期、短时间详细的计划，这样反而自缚手脚，因为眼下无论做些什么，似乎对于那个长远宏大的目标没有帮助，更加不愿行动了。</p>
-<p>胡适说过，“怕什么真理无穷，进一寸有一寸的欢喜”，的确啊，高中的时候，有一段时间，成绩没有起色，很苦恼，然后我给自己写了个“功不唐捐”的纸条贴在课桌上，甚至写满了每个课本的扉页，自我激励着，踏实做每一道习题，每个化学方程式，每个英文单词，尽管每次模拟考试，都不如我意，但高考时，确实有极大的进步，被老师同学称为黑马。</p>
+    <content type="html"><![CDATA[<p>一整个下午都被我浪费掉了，刷刷微博，逛逛论坛，半点知识没学。<br>究其原因，一是懒惰，二是自己好大喜功，总定大目标，长目标，好高骛远，没有短期、短时间详细的计划，这样反而自缚手脚，因为眼下无论做些什么，似乎对于那个长远宏大的目标没有帮助，更加不愿行动了。<br><a id="more"></a><br>胡适说过，“怕什么真理无穷，进一寸有一寸的欢喜”，的确啊，高中的时候，有一段时间，成绩没有起色，很苦恼，然后我给自己写了个“功不唐捐”的纸条贴在课桌上，甚至写满了每个课本的扉页，自我激励着，踏实做每一道习题，每个化学方程式，每个英文单词，尽管每次模拟考试，都不如我意，但高考时，确实有极大的进步，被老师同学称为黑马。</p>
 <p>进一寸的欢喜，不需要他山之石，自己的经验就足够，尤其在技术这个需要不断学习沉淀的行业。沉下心，慢慢来。</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;一整个下午都被我浪费掉了，刷刷微博，逛逛论坛，半点知识没学。&lt;br&gt;究其原因，一是懒惰，二是自己好大喜功，总定大目标，长目标，好高骛远，没有短期、短时间详细的计划，这样反而自缚手脚，因为眼下无论做些什么，似乎对于那个长远宏大的目标没有帮助，更加不愿行动了。&lt;/p&gt;
-&lt;p&gt;胡
+      &lt;p&gt;一整个下午都被我浪费掉了，刷刷微博，逛逛论坛，半点知识没学。&lt;br&gt;究其原因，一是懒惰，二是自己好大喜功，总定大目标，长目标，好高骛远，没有短期、短时间详细的计划，这样反而自缚手脚，因为眼下无论做些什么，似乎对于那个长远宏大的目标没有帮助，更加不愿行动了。&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
@@ -128,9 +108,9 @@ This document teaches you everything you have to learn about HTML 5.
     <link href="http://arvin-wang.github.io/2017/05/27/diary3/"/>
     <id>http://arvin-wang.github.io/2017/05/27/diary3/</id>
     <published>2017-05-27T02:16:31.759Z</published>
-    <updated>2017-06-06T09:23:55.282Z</updated>
+    <updated>2017-07-31T08:08:22.881Z</updated>
     
-    <content type="html"><![CDATA[<p>昨天一个项目，在一个密码提示框出，要hover一个聊天框出来，聊天框上是有三角形的，之前好像也写过，但当时直接搜的样例用了，没太搞清楚空心三角形怎么写的。今天闲下来，就把这一小块知识梳理一下。</p>
+    <content type="html"><![CDATA[<p>昨天一个项目，在一个密码提示框出，要hover一个聊天框出来，聊天框上是有三角形的，之前好像也写过，但当时直接搜的样例用了，没太搞清楚空心三角形怎么写的。今天闲下来，就把这一小块知识梳理一下。<br><a id="more"></a></p>
 <p>·············</p>
 <p>首先，空心三角形的思路是：用before伪类写一个实心三角形，再用after写一个小一圈的三角形覆盖上去，留下边缘，形成空心三角的视觉效果(好想说“形成这样一个triangle的Visual effect”,现在程序员说话不蹦几个English words好像都不好意思开口，真是奇怪的文化；我司开会时，更新、跟进不说更新，都说“我们来update一下”，呵呵，老铁真想给你个666)。</p>
 <!-- <div class="arvin-triangle" id="triangle-up">
@@ -144,9 +124,7 @@ This document teaches you everything you have to learn about HTML 5.
     
     <summary type="html">
     
-      &lt;p&gt;昨天一个项目，在一个密码提示框出，要hover一个聊天框出来，聊天框上是有三角形的，之前好像也写过，但当时直接搜的样例用了，没太搞清楚空心三角形怎么写的。今天闲下来，就把这一小块知识梳理一下。&lt;/p&gt;
-&lt;p&gt;·············&lt;/p&gt;
-&lt;p&gt;首先，空心三角形的思路是
+      &lt;p&gt;昨天一个项目，在一个密码提示框出，要hover一个聊天框出来，聊天框上是有三角形的，之前好像也写过，但当时直接搜的样例用了，没太搞清楚空心三角形怎么写的。今天闲下来，就把这一小块知识梳理一下。&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
@@ -160,17 +138,15 @@ This document teaches you everything you have to learn about HTML 5.
     <link href="http://arvin-wang.github.io/2017/05/22/diary2/"/>
     <id>http://arvin-wang.github.io/2017/05/22/diary2/</id>
     <published>2017-05-22T02:08:33.768Z</published>
-    <updated>2017-05-22T08:54:40.745Z</updated>
+    <updated>2017-07-31T08:08:36.065Z</updated>
     
-    <content type="html"><![CDATA[<p>经过认真（从前端工程师开始的职业生涯，对js熟悉并有好感；V8很强大，js很美好；Node社区及其活跃，未来可期）考虑，我决定潜心学习node.js，记录之。<br>node学习网站推荐：</p>
-<p><a href="https://nodejs.org" target="_blank" rel="external">https://nodejs.org</a><br><a href="https://www.npmjs.com/" target="_blank" rel="external">https://www.npmjs.com/</a><br><a href="https://github.com" target="_blank" rel="external">https://github.com</a><br><a href="http://stackoverflow.com/" target="_blank" rel="external">http://stackoverflow.com/</a></p>
+    <content type="html"><![CDATA[<p>经过认真（从前端工程师开始的职业生涯，对js熟悉并有好感；V8很强大，js很美好；Node社区及其活跃，未来可期）考虑，我决定潜心学习node.js，记录之。<br>node学习网站推荐：<br><a id="more"></a><br><a href="https://nodejs.org" target="_blank" rel="external">https://nodejs.org</a><br><a href="https://www.npmjs.com/" target="_blank" rel="external">https://www.npmjs.com/</a><br><a href="https://github.com" target="_blank" rel="external">https://github.com</a><br><a href="http://stackoverflow.com/" target="_blank" rel="external">http://stackoverflow.com/</a></p>
 <p>http协议的知识大学时候就没搞清楚，上课在瞎混，以前浪费的时间还是要补回来的。这篇“从输入 URL 到页面加载完成的过程中都发生了什么事情？”很棒。学而时习之。<br><a href="http://fex.baidu.com/blog/2014/05/what-happen/" target="_blank" rel="external">http://fex.baidu.com/blog/2014/05/what-happen/</a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;经过认真（从前端工程师开始的职业生涯，对js熟悉并有好感；V8很强大，js很美好；Node社区及其活跃，未来可期）考虑，我决定潜心学习node.js，记录之。&lt;br&gt;node学习网站推荐：&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://nodejs.org&quot; target
+      &lt;p&gt;经过认真（从前端工程师开始的职业生涯，对js熟悉并有好感；V8很强大，js很美好；Node社区及其活跃，未来可期）考虑，我决定潜心学习node.js，记录之。&lt;br&gt;node学习网站推荐：&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
@@ -186,18 +162,17 @@ This document teaches you everything you have to learn about HTML 5.
     <link href="http://arvin-wang.github.io/2017/05/18/diary1/"/>
     <id>http://arvin-wang.github.io/2017/05/18/diary1/</id>
     <published>2017-05-18T02:04:36.686Z</published>
-    <updated>2017-05-18T03:25:28.777Z</updated>
+    <updated>2017-07-31T08:05:24.736Z</updated>
     
     <content type="html"><![CDATA[<p>准备给公司电脑设置SSH，绑定git blog在本机。</p>
-<p>业精于勤，荒于嬉；行成于思，毁于随。<br>我打小自以为有点小聪明，成绩比别人好，学习、做事，就都有些任性和马虎，养成了散漫的习惯，以至于现在有了拖延和迟到的毛病。</p>
+<p>业精于勤，荒于嬉；行成于思，毁于随。<a id="more"></a><br>我打小自以为有点小聪明，成绩比别人好，学习、做事，就都有些任性和马虎，养成了散漫的习惯，以至于现在有了拖延和迟到的毛病。</p>
 <p>准时就是迟到；立刻处理手头的事情，才不会有焦虑。谨记之。</p>
 ]]></content>
     
     <summary type="html">
     
       &lt;p&gt;准备给公司电脑设置SSH，绑定git blog在本机。&lt;/p&gt;
-&lt;p&gt;业精于勤，荒于嬉；行成于思，毁于随。&lt;br&gt;我打小自以为有点小聪明，成绩比别人好，学习、做事，就都有些任性和马虎，养成了散漫的习惯，以至于现在有了拖延和迟到的毛病。&lt;/p&gt;
-&lt;p&gt;准时就是迟到；立刻处理手
+&lt;p&gt;业精于勤，荒于嬉；行成于思，毁于随。&lt;/p&gt;
     
     </summary>
     

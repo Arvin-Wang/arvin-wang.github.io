@@ -230,8 +230,7 @@
     </header>
     <div class="entry">
       
-        <p>一直想在hexo博文中插入图片，发现md文档怎么引入都有问题。同时我不想用图床，因为速度的问题。而且很巧的是国内用的比较多的新浪图床挂了。探究了一番。找到了一个工具，比较好使。</p>
-<p>hexo-asset-image</p>
+        <p>一直想在hexo博文中插入图片，发现md文档怎么引入都有问题。同时我不想用图床，因为速度的问题。而且很巧的是国内用的比较多的新浪图床挂了。探究了一番。找到了一个工具，比较好使。<br><a id="more"></a><br>hexo-asset-image</p>
 <p>Process：<br>1st，修改_config.yml post_asset_folder:为true；<br>2nd，npm install hexo-asset-image –save；<br>3rd，再次生成博文时，hexo new post “XXX”, source/_posts 文件下会生成对应的”XXX”文件夹和“XXX”.md文件，此md文件引用图片的路径直接就是<br><code>![图片名字（自己起）](XXX.jpg)</code><br>例：<br><img src="/2017/06/06/test-diary5/3.jpg" alt=""></p>
 <p><img src="/2017/06/06/test-diary5/1.jpg" alt="Arvin&#39;s img 1"><br><img src="/2017/06/06/test-diary5/2.jpg" alt="Arvin&#39;s img 2"></p>
 <p>或者，也可以手动建立，图像文件夹和md文档，名字相同即可，效果一样。</p>
