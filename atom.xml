@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://arvin-wang.github.io/"/>
-  <updated>2017-07-31T09:13:25.555Z</updated>
+  <updated>2017-08-04T08:29:18.829Z</updated>
   <id>http://arvin-wang.github.io/</id>
   
   <author>
@@ -14,6 +14,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>玩弄vue.js的一天</title>
+    <link href="http://arvin-wang.github.io/2017/08/02/diary11/"/>
+    <id>http://arvin-wang.github.io/2017/08/02/diary11/</id>
+    <published>2017-08-02T02:36:43.000Z</published>
+    <updated>2017-08-04T08:29:18.829Z</updated>
+    
+    <content type="html"><![CDATA[<p>对vue的关注有时间了，也有朋友推荐过提早学习，今儿开始看。<br>标题之所以叫玩弄vue.js，是因为近来对于技术语言，我越来越能感受到学习、使用它们的乐趣了，就是玩。<a id="more"></a></p>
+<p>在跟react.js，Augular.js对比下，看到了vue的一些优点。灵活，清晰，简单；跟MVVM领域的先驱Knockout对比，vue发展更好，前景广阔。用第三方的跑分软件来看，vue的性能也很赞。<br><br><br><img src="/2017/08/02/diary11/d11-1.jpg" alt="依然从hello world开始了新的学习~"></p>
+<p>使用Vue的过程就是定义MVVM各个组成部分的过程的过程。</p>
+<p>1.定义View<br>2.定义Model<br>3.创建一个Vue实例或”ViewModel”，它用于连接View和Model</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;对vue的关注有时间了，也有朋友推荐过提早学习，今儿开始看。&lt;br&gt;标题之所以叫玩弄vue.js，是因为近来对于技术语言，我越来越能感受到学习、使用它们的乐趣了，就是玩。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="vue.js" scheme="http://arvin-wang.github.io/categories/vue-js/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>JavaScript高级程序设计（第三版）读书笔记</title>
