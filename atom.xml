@@ -56,11 +56,11 @@
   </entry>
   
   <entry>
-    <title>JS关键字之this</title>
+    <title>JS关键字</title>
     <link href="http://arvin-wang.github.io/2017/08/08/diary12/"/>
     <id>http://arvin-wang.github.io/2017/08/08/diary12/</id>
     <published>2017-08-08T03:50:46.000Z</published>
-    <updated>2017-08-08T09:26:03.358Z</updated>
+    <updated>2017-09-13T08:01:19.927Z</updated>
     
     <content type="html"><![CDATA[<p>此文研究JS中this关键字的作用（指向）。<br>学而时习之。<br><a id="more"></a><br>首先，JS里面，函数的几种调用方式:<br>普通函数调用<br>作为方法来调用<br>作为构造函数来调用<br>使用apply/call方法来调用<br>Function.prototype.bind方法<br>es6箭头函数</p>
 <p>但是不管函数是按哪种方法来调用的，请记住一点：谁调用这个函数或方法,<strong style="color: red">this关键字就指向谁</strong>。</p>
@@ -134,11 +134,13 @@
     <link href="http://arvin-wang.github.io/2017/07/31/diary10/"/>
     <id>http://arvin-wang.github.io/2017/07/31/diary10/</id>
     <published>2017-07-31T08:38:19.000Z</published>
-    <updated>2017-08-07T02:27:32.719Z</updated>
+    <updated>2017-09-13T08:00:40.711Z</updated>
     
     <content type="html"><![CDATA[<p>纸上得来终觉浅，觉知此事要躬行。</p>
 <p><center><img src="/2017/07/31/diary10/javaScript3.jpg" alt=""></center><a id="more"></a><br>工作1年了，总结一下做项目中的问题，最严重的一个就是有时候解决bug，一知半解，根本原因就是基础知识不牢靠，很多时候GOOGLE or BAIDU后，找到了想要的代码，加以修改解决了问题，却不能立刻完全理解。自己很是苦恼。因此在工作1年之际，静心再读书，从豆豆推荐的JavaScript高级程序设计（第三版）开始。<br>    在慕课之类的网站上边学边练，效果也比较明显，但<br>对于自小就喜欢读书、喜欢刨根问底的我而言，还是看技术著作收获更大，更开心。</p>
-<p>按章节总结：<br>Chap1：<br>JavaScript诞生于1995年。最初由网景公司开发。<br>JavaScript包括：1,ECMAScript（由ECMA-262定义）；2，DOM；3，BOM。<br>是专为与网页交互而设计的脚本语言。<br>Chap2：<br>JS的插入方式2种。<br>使用src引入外部文件较好：可维护性；可缓存。<br><code>&lt;noscript&gt;&lt;/noscript&gt;</code>标签可在脚本无效情况下显示。<br>Script标签依次在DOM中被解析。<br>Chap3：</p>
+<p>按章节总结：<br>Chap1：<br>JavaScript诞生于1995年。最初由网景公司开发。<br>JavaScript包括：1,ECMAScript（由ECMA-262定义）；2，DOM；3，BOM。<br>是专为与网页交互而设计的脚本语言。<br>Chap2：<br>JS的插入方式2种。<br>使用src引入外部文件较好：可维护性；可缓存。<br><code>&lt;noscript&gt;&lt;/noscript&gt;</code>标签可在脚本无效情况下显示。<br>Script标签依次在DOM中被解析。<br>Chap3：<br>ECMAScript基本数据类型包括：underfind、Null、Boolean、Number、String<br>无整数型、浮点数型，NUMBER可用于所有数值<br>有很多类C语言的基本操作符。<br>语句：if、do-while、while、for、for-in、label、break和continue、with、switch等。<br>Chap4：<br>JS变量可以用来保存两种类型值：基本类型值、引用类型值。前者在内存中占据固定大小空间，被保存在栈内存中；后者的值是对象，保存在堆内存中。<br>JS从一个变量向另一个变量复制引用类型的值，复制的其实是指针，因此两个变量最终都指向同一个对象。<br>确定一个值的类型可以用：typeof操作符；确定一个值是那种引用类型：instanceof。<br>JS具有自动垃圾收集机制。<br>Chap5：<br>对象在JS中被称为引用类型的值，函数实际上是Function类型的实例，因此函数也是对象。<br>由于函数是对象，其也拥有方法，可以用来增强其行为。<br>JS中基本类型值可以被当做对象来访问。<br>Chap6：<br>JS支持OO（面向对象）编程，但不使用类或者接口。<br>JS主要通过原型链实现继承。<br>原型链的构建是通过将一个类型的实例赋值给另外一个构造函数的原型实现的。<br>Chap7：<br>JS没有名字的函数表达式称为匿名函数。<br>递归函数应该使用arguments.callee来递归地调用自身。使用函数名，函数名可能发生变化。<br>当在函数内部定义了其他函数，就创建了闭包。闭包有权访问包含函数内部的所有变量。<br>Chap8：<br>浏览器对象模型（BOM）以window对象为依托，表示浏览器窗口以及页面可见区域。同事，window对象还是ECMAScript的global对象，因而所有全局变量和函数都是他的属性，且所有原生的构造函数及其他函数也都存在于它的命名空间下。<br>BOM中还有screen和history两个对象。<br>前者保存着与客户端显示器有关的信息，这些信息一般只用于站点分析。<br>后者为访问浏览器的历史记录开了一个小缝隙，开发人员可以据此判断历史记录的数量，也可用于导航。<br>Chap9：<br>第九章谈到了客户端检测，现在不同浏览器对代码的解读差异日益缩小。本章速读。<br>客户端检测有：能力检测、怪癖检测、用户代理检测。<br>Chap10：<br>DOM是语言中立的API，用于访问和操作HTML和XML文档。<br>DOM1级将HTML和XML文档形象地看做一个层次化的节点树，可以使用js来操作这个节点树，进而改变底层文档的外观和结构。<br>DOM的各种节点：<br>最基本，Node；<br>其他：Document、Element。<br>理解DOM的关键，就是理解DOM对性能的影响。DOM操作往往是JS程序中开销最大的部分。访问NODELISI导致的问题最多。NODELIST都是动态的，每次访问NODELIST对象，都会运行一次查询。因此，最好尽量减少DOM操作。<br>Chap11：<br>DOM扩展。<br>此章需要在实践中理解、记忆。<br>Chap12：<br>DOM2&amp;DOM3<br>DOM1级主要定义的是HTML和XML文档的底层结构。<br>DOM2DOM3则在此基础上引入了更多交互能力。也支持更高级的XML特性。<br>Chap13：<br>事件。<br>事件是JS与网页联系在一起的主要方式。</p>
+<p>Chap14：<br>表单脚本。<br>表单的提交、重置、字段。<br>文本框脚本，一些操作：选择文本、过滤输出、自动切换焦点、HTML5约束验证API。<br>选择框脚本的操作。<br>这章内容貌似我全部使用过。</p>
+<p>Chap15：<br>Canvas绘图。<br>填充、描边、绘制形状、文本了阴影、渐变，etc。</p>
 ]]></content>
     
     <summary type="html">
@@ -218,11 +220,11 @@ This document teaches you everything you have to learn about HTML 5.
   </entry>
   
   <entry>
-    <title>好！烦！</title>
+    <title>自省</title>
     <link href="http://arvin-wang.github.io/2017/05/27/diary4/"/>
     <id>http://arvin-wang.github.io/2017/05/27/diary4/</id>
     <published>2017-05-27T08:17:59.432Z</published>
-    <updated>2017-07-31T08:08:12.288Z</updated>
+    <updated>2017-09-13T08:10:50.871Z</updated>
     
     <content type="html"><![CDATA[<p>一整个下午都被我浪费掉了，刷刷微博，逛逛论坛，半点知识没学。<br>究其原因，一是懒惰，二是自己好大喜功，总定大目标，长目标，好高骛远，没有短期、短时间详细的计划，这样反而自缚手脚，因为眼下无论做些什么，似乎对于那个长远宏大的目标没有帮助，更加不愿行动了。<br><a id="more"></a><br>胡适说过，“怕什么真理无穷，进一寸有一寸的欢喜”，的确啊，高中的时候，有一段时间，成绩没有起色，很苦恼，然后我给自己写了个“功不唐捐”的纸条贴在课桌上，甚至写满了每个课本的扉页，自我激励着，踏实做每一道习题，每个化学方程式，每个英文单词，尽管每次模拟考试，都不如我意，但高考时，确实有极大的进步，被老师同学称为黑马。</p>
 <p>进一寸的欢喜，不需要他山之石，自己的经验就足够，尤其在技术这个需要不断学习沉淀的行业。沉下心，慢慢来。</p>
@@ -272,19 +274,22 @@ This document teaches you everything you have to learn about HTML 5.
   </entry>
   
   <entry>
-    <title>Node学习——1st</title>
+    <title>Nodo学习手记</title>
     <link href="http://arvin-wang.github.io/2017/05/22/diary2/"/>
     <id>http://arvin-wang.github.io/2017/05/22/diary2/</id>
     <published>2017-05-22T02:08:33.768Z</published>
-    <updated>2017-07-31T08:08:36.065Z</updated>
+    <updated>2017-09-13T08:10:19.831Z</updated>
     
-    <content type="html"><![CDATA[<p>经过认真（从前端工程师开始的职业生涯，对js熟悉并有好感；V8很强大，js很美好；Node社区及其活跃，未来可期）考虑，我决定潜心学习node.js，记录之。<br>node学习网站推荐：<br><a id="more"></a><br><a href="https://nodejs.org" target="_blank" rel="external">https://nodejs.org</a><br><a href="https://www.npmjs.com/" target="_blank" rel="external">https://www.npmjs.com/</a><br><a href="https://github.com" target="_blank" rel="external">https://github.com</a><br><a href="http://stackoverflow.com/" target="_blank" rel="external">http://stackoverflow.com/</a></p>
+    <content type="html"><![CDATA[<p>node学习网站推荐：<br><a id="more"></a><br><a href="https://nodejs.org" target="_blank" rel="external">https://nodejs.org</a><br><a href="https://www.npmjs.com/" target="_blank" rel="external">https://www.npmjs.com/</a><br><a href="https://github.com" target="_blank" rel="external">https://github.com</a><br><a href="http://stackoverflow.com/" target="_blank" rel="external">http://stackoverflow.com/</a></p>
 <p>http协议的知识大学时候就没搞清楚，上课在瞎混，以前浪费的时间还是要补回来的。这篇“从输入 URL 到页面加载完成的过程中都发生了什么事情？”很棒。学而时习之。<br><a href="http://fex.baidu.com/blog/2014/05/what-happen/" target="_blank" rel="external">http://fex.baidu.com/blog/2014/05/what-happen/</a></p>
+<p>Node.js优点：<br>1、采用事件驱动、异步编程，为网络服务而设计。<br>其实Javascript的匿名函数和闭包特性非常适合事件驱动、异步编程。<br>而且JavaScript也简单易学，很多前端设计人员可以很快上手做后端设计。<br>2、Node.js非阻塞模式的IO处理给Node.js带来在相对低系统资源耗用下的高性能与出众的负载能力，非常适合用作依赖其它IO资源的中间层服务。<br>3、Node.js轻量高效，可以认为是数据密集型分布式部署环境下的实时应用系统的完美解决方案。<br>Node非常适合如下情况：在响应客户端之前，您预计可能有很高的流量，但所需的服务器端逻辑和处理不一定很多。<br>Node.js缺点：<br>1、可靠性低<br>2、单进程，单线程，只支持单核CPU，不能充分的利用多核CPU服务器。<br>一旦这个进程崩掉，那么整个web服务就崩掉了。<br>不过以上缺点可以可以通过代码的健壮性来弥补。</p>
+<p>NODE的应用：<br>本博客：hexo  就是基于node.js的一个module。</p>
+<p>除了博客，在工作过程中还用到了node的两个重要模块：express和webpack。<br>前者是“是一个基于 Node.js 平台的极简、灵活的 web 应用开发框架，它提供一系列强大的特性，帮助你创建各种 Web 和移动设备应用。”<br>后者“可以将许多松散的模块按照依赖和规则打包成符合生产环境部署的前端资源。还可以将按需加载的模块进行代码分隔，等到实际需要的时候再异步加载。通过 loader 的转换，任何形式的资源都可以视作模块，比如 CommonJs 模块、 AMD 模块、 ES6 模块、CSS、图片、 JSON、Coffeescript、 LESS 等”。</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;经过认真（从前端工程师开始的职业生涯，对js熟悉并有好感；V8很强大，js很美好；Node社区及其活跃，未来可期）考虑，我决定潜心学习node.js，记录之。&lt;br&gt;node学习网站推荐：&lt;br&gt;&lt;/p&gt;
+      &lt;p&gt;node学习网站推荐：&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
